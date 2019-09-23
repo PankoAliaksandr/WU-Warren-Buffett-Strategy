@@ -1,0 +1,140 @@
+\documentclass{article}
+
+\usepackage{graphicx}
+
+\author{Anastasia Moshtakova 11714144,  Panko }
+
+\title{0666 - Portfolio Management Applications - Assignment VII}
+\usepackage[left=25mm,top=30mm,bottom=30mm,right=25mm]{geometry}
+
+\begin{document}
+\maketitle
+\section{Paper discussion}
+\subsection{Outline}
+\par The investment strategy of Warren Buffett has been something very remarkable in the sense of extremely high returns over a long period of time. Having invested 1 dollar in Berkshire Hathaway in 1976 one would get 3685\$ in 2017.  Over the mentioned period, the annual average return reached 18.6\% compared to 7.5\% average annual market return. Also the risk-return rate for the Berkshire Hathaway is higher than that of the market which is 0.79, 1.6 times higher than the market’s Sharpe ratio of 0.49.
+\par From the point of view of the proponents of the efficient market, the high performance of the Buffett's portfolio is a matter of luck, since it is impossible to outperform the market in terms of return in the long run in accordance with the efficient markets hypothesis. 
+\par The authors of the paper Buffett's Alpha try to decompose the high return of the Buffett's portfolio into the following constituents:
+\vspace{-5.5pt}
+\begin{itemize}
+\item  Structure of the corporation;\vspace{-5.5pt}
+\item High leverage;\vspace{-5.5pt}
+\item Private companies owned by BH;\vspace{-5.5pt}
+\item Public companies owned by BH;\vspace{-5.5pt}
+\item Stock selection 
+\end{itemize}
+In the next section, we will \textbf{critically review} each of these points separately.
+\subsection{Results review}
+\begin{itemize}
+\item \textbf{High leverage} \par The use of leverage helps to increase the return on the investment of the company. The authors calculated the leverage  for BH which is 1.7, which means that the return on 1 unit of company's own capital provide BH with 1.7 units of profit. This also explains the high volatility of the share price of the company provided that they invest in relatively stable shares. In case of high leverage, if the target shares have loss of 1\% the loss of the company is higher on the leverage, which is 1.7\% in this case. Here comes the question, why having the high leverage that creates the high return for the company, the company hasn't gone bankrupt? The answer is probably the ability of Buffett to pick the right stock.
+\item \textbf{Owned companies performance} \par The performance of the privately held companies may additionally capture his success as a manager. The performance of the publicly traded companies is a measure of Warren Buffett’s stock-selection ability. To estimate the contribution of the stock-selection ability into the return, the authors collected the data for the time series of the monthly returns of the public companies owned by BH and got the following results: both public and private portfolios have exceeded the overall stock market in terms of average excess return, risk, and Sharpe ratio. 
+\item \textbf{Stock selection approach} \par To get the idea of what kind of securities BH invests mostly in, the authors run the 6-factor model with additional to 4-factor model: BAB is betting against beta (loading on the BAB factor reflects a tendency to buy safe (i.e., low-beta) stocks while shying away from risky (i.e., high-beta) stocks), and QMJ is quality minus junk (reflects a tendency to buy high-quality companies—that is, companies that are profitable, growing, and safe and have high payout). \par First, Berkshire’s negative loading reflects the tendency to buy large-cap stocks (negative SMB). We also can observe the tendency of buying stocks that are cheap—in the sense of having high book value relative to their market value (positive HML). Insignificant loading on UMD means that Buffett is not chasing trends in his stock selection. From the results provided in the paper (Table 4) we conclude that the standard interpretation of the model does not explain the high return of the BH. \par In contrast, the innovative two factors introduced in the article: BAB and QMJ seem to have higher loadings which means that Buffett likes to buy safe, high-quality stocks. \par The critics of these two factors might come from the point that Fama-French 4-factor model already has the factor that accounts for value investment: HML. There might appear high dependence between those two factors which bias the loadings introduced in the results (Table 4). 
+\end{itemize}
+\begin{figure}[h!]
+ \centering
+	\includegraphics[width=0.8\linewidth]{table.png}
+	\caption{Table 4}
+\end{figure}
+
+\subsection{Conclusion}
+All in all, the authors empirically proved that the exceptionally good performance of the Buffett's portfolio is based on the two main features: high leverage, and  safe, high-quality, value stock picking. Although, the recipe seems to be too simple to prevent every investor from investing this way. Most likely, the approach of BH was based on this pure strategy about 30-20 years ago when the following this simple strategy was not available for every company or investor. In the current times, there should be some other drivers of the returns of the BH, since "chance" is not very likely to work infallibly for more than 40 years. \par The performance of the Buffett's strategy can be explained by his following the same strategy of investing in cheap and safe stock for about half a century: even when his approach was considered to be "out-of-date" he kept to it which helped him to go through bubbles and crises.
+
+\section{Performance metrics calculation}
+In the beginning we would like to notice that we chose 10 years periods, since Buffett is long-term investor and, as he mentioned, 10 years horizon is his average.
+
+First, let us calculate basic statistics of Baffet's portfolio excess returns:
+% latex table generated in R 3.4.0 by xtable 1.8-3 package
+% Fri Feb 01 01:12:11 2019
+\begin{table}[ht]
+\centering
+\begin{tabular}{rrrrrrrrrrrr}
+  \hline
+ & vars & n & mean & sd & median & min & max & range & skew & kurtosis & se \\ 
+  \hline
+1988-1998 & 1.000 & 121.000 & 0.021 & 0.063 & 0.016 & -0.146 & 0.261 & 0.407 & 0.770 & 2.116 & 0.006 \\ 
+  1999-2008 & 1.000 & 121.000 & 0.008 & 0.062 & 0.002 & -0.147 & 0.295 & 0.443 & 0.742 & 3.645 & 0.006 \\ 
+  2009-2018 & 1.000 & 121.000 & 0.007 & 0.048 & 0.008 & -0.122 & 0.155 & 0.277 & 0.137 & 0.670 & 0.004 \\ 
+  full & 1.000 & 371.000 & 0.012 & 0.058 & 0.008 & -0.147 & 0.295 & 0.443 & 0.693 & 2.864 & 0.003 \\ 
+   \hline
+\end{tabular}
+\end{table}
+We can notice that the mean differs during the time period. Moreover, what is interesting that on average Buffett's means only a little bit exceed fisk-free results. It's clear that leverage must be used to achieve such a extraordinary results.\\
+\newline
+However, looking at minimum and maximum values we can conclude that the portfolio experienced significant deviations. At the same time he has positive skewness that is great, meaning that extream values are in average positive news for him. Standard deviation also is not huge.
+
+
+
+Sharpe Ratio is calculated using geometric chaining
+
+% latex table generated in R 3.4.0 by xtable 1.8-3 package
+% Fri Feb 01 01:34:03 2019
+\begin{table}[ht]
+\centering
+\begin{tabular}{rrrrrr}
+  \hline
+ & SR & TR & IR & JensenAlpha & MultifAlpha \\ 
+  \hline
+1988-1998 & 1.136 & 0.281 & 0.657 & 0.140 & 0.151 \\ 
+  1999-2008 & 0.377 & 0.206 & 0.238 & 0.071 & 0.050 \\ 
+  2009-2018 & 0.442 & 0.131 & -0.061 & 0.027 & 0.061 \\ 
+  full & 0.638 & 0.218 & 0.276 & 0.084 & 0.064 \\ 
+   \hline
+\end{tabular}
+\end{table}
+
+Sharpe Ratio is calculated using arithmetic chaining
+
+% latex table generated in R 3.4.0 by xtable 1.8-3 package
+% Fri Feb 01 01:40:33 2019
+\begin{table}[ht]
+\centering
+\begin{tabular}{rrrrrr}
+  \hline
+ & SR & TR & IR & JensenAlpha & MultifAlpha \\ 
+  \hline
+1988-1998 & 1.128 & 0.281 & 0.657 & 0.140 & 0.151 \\ 
+  1999-2008 & 0.468 & 0.206 & 0.238 & 0.071 & 0.050 \\ 
+  2009-2018 & 0.510 & 0.131 & -0.061 & 0.027 & 0.061 \\ 
+  full & 0.701 & 0.218 & 0.276 & 0.084 & 0.064 \\ 
+   \hline
+\end{tabular}
+\end{table}
+
+
+In \textbf{Sharpe Ratio}, $SR=\frac {E\left[ r_{p}-r_{f}\right] }{\sigma _{pf}}$ we can see the same picture: the value differs significantly over times. Looking at the full period SR we can notice that our value a bit lower than the one in the paper. Moreover, geometric approach results in even lower values. The difference with the paper is probably connected with different time period.\\
+\newline
+
+\textbf{Treynor Ratio}, $Treynor=\frac {E\left[ r_{p}-r_{f}\right] }{\beta _{p}}$ is similar to the Sharpe Ratio, except it uses beta as the volatility measure.  the Treynor ratio shows, how well a portfolio outperforms the equity market as a whole. The limitation of this indicator is that the accuracy of the Treynor ratio is highly dependent on the use of appropriate benchmarks to measure beta. The interesting fact that this values are more or less stable over the avalized periods\\
+\newline
+
+\textbf{Information Ratio}, $IR=\frac {rp}{te}$ , where $rp=r_{p}-r_{m}$, $te=\sigma \left( r_{p}-r_{m}\right)$ is a measurement of portfolio returns beyond the returns of a benchmark, usually an index, to the volatility of those returns. IR measures a portfolio manager's ability to generate excess returns relative to a benchmark, but it also attempts to identify the consistency of the performance. We can notice that during 2009-2018 this value is negative that reflects the fact that Buffett's portfolio underperforms comparing to the market. It is consistent with Buffett's strategy. The last period corresponds to the longest up movement in the market. He has the same results during .com bubble.\\
+\newline
+
+\textbf{JensenAlpha}, $\alpha =\left( r_{p}-r_{f}\right) -\beta _{m}\left( r_{m}-r_{f}\right)$, where $r_{f}$ is the intercept of the regression equation in the Capital Asset Pricing Model and is in effect the exess return adjusted for systematic risk. So, first of all it is positive for all periods meaning that the portfolio outperforms CAPM model estimations. Looking at the values, we can conclude that the outperformance is rather significant from 2.7 to 14\%!\\
+\newline
+
+
+\textbf{Multifactor-Alpha}, $\alpha =\left( r_{p}-r_{f}\right) -\sum_{i = 1}^n\beta_i \times factor_i$
+These values are supposed to be insignificant and around zero if our factors explain the performance. In our case, indeed almost all $\alpha$ are not significant at 5\% level of confidence (but significant at 10\%). The values are not far away from Jensen's Alphas and are rather big (being interpreted as the model outperformance)
+
+% latex table generated in R 3.4.0 by xtable 1.8-3 package
+% Fri Feb 01 02:55:51 2019
+\begin{table}[ht]
+\centering
+\begin{tabular}{rrrrrrr}
+  \hline
+ & (Intercept) & DT\_10\$Mkt & DT\_10\$SMB & DT\_10\$HML & DT\_10\$RMW & DT\_10\$CMA \\ 
+  \hline
+1988-1998 & 2.053 & 4.962 & -0.867 & -0.049 & -0.585 & -0.112 \\ 
+  1999-2008 & 0.875 & 5.877 & -3.016 & 2.334 & 1.394 & 0.010 \\ 
+  2009-2018 & 1.328 & 5.036 & -2.122 & 3.074 & -1.055 & -0.007 \\ 
+  full & 1.974 & 10.392 & -3.494 & 3.615 & 2.476 & -0.517 \\ 
+   \hline
+\end{tabular}
+\end{table}
+
+
+
+
+
+
+\end{document}
